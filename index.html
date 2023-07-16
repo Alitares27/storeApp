@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StoreApp</title>
-    <link rel="stylesheet" href="/src/styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
-<div class="wraper">
-    <aside>
 
-        <header>
-            <h1 class="logo">StorApp</h1>
-        </header>
-        <nav>
-            <ul class="menu">
-                <li>
-                    <button class="btnMenu btnCategory active"><i class="bi bi-arrow-right-square-fill"></i>all Products</button>
-                </li>
-                <li>
-                    <button class="btnMenu btnCategory"><i class="bi bi-arrow-right-square"></i>Jewelery</button>
-                </li>
-                <li>
-                    <button class="btnMenu btnCategory"><i class="bi bi-arrow-right-square"></i>women's clothing</button>
-                </li>
-                <li>
-                    <button class="btnMenu btnCategory"><i class="bi bi-arrow-right-square"></i>men's clothing</button>
-                </li>
-                <li>
-                    <button class="btnMenu btnCategory"><i class="bi bi-arrow-right-square"></i>electronics</button>
-                </li>
-                <li>
-                    <a class="btnMenu btnCart active" href="/src/pages/cart.html"><i class="bi bi-bag-check-fill"></i>Cart <span class="number">0</span></a></li>
-            </ul>
-        </nav>
-        <footer>
-            <p class="copyright">© 2023 StorApp </p>
-        </footer>
+  <div class="wraper">
+    <aside>
+      <header>
+        <h1 class="logo"><a id="logo" href="index.html">StorApp</a> </h1>
+      </header>
+      <nav>
+        <ul class="menu">
+          <li>
+            <button id="all" class="btnMenu btnCategory active">
+              <i class="bi bi-arrow-right-square-fill"></i>All
+            </button>
+          </li>
+          <li>
+            <button id="jewelery" value="Jewelery" class="btnMenu btnCategory">
+              <i class="bi bi-arrow-right-square"></i>Jewelery
+            </button>
+          </li>
+          <li>
+            <button id="women's clothing" class="btnMenu btnCategory">
+              <i class="bi bi-arrow-right-square"></i>Women's Clothing
+            </button>
+          </li>
+          <li>
+            <button id="men's clothing" class="btnMenu btnCategory">
+              <i class="bi bi-arrow-right-square"></i>Men's Clothing
+            </button>
+          </li>
+          <li>
+            <button id="electronics" class="btnMenu btnCategory">
+              <i class="bi bi-arrow-right-square"></i>Electronics
+            </button>
+          </li>
+          <li>
+            <a class="btnMenu btnCart active" href="/src/pages/cart.html"
+              ><i class="bi bi-bag-check-fill"></i>Cart
+              <span class="number">0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <footer>
+        <p class="copyright">© 2023 StorApp</p>
+      </footer>
     </aside>
     <main>
-        <h2  class="mainTitle">All Products</h2>
-        <div class="productsContainer"></div>
-        <div class="product"></div>
-        <img class="productImage" src="" alt="">
-        <div class="productDetails">
-            <h3 class="productName">Name</h3>
-            <p class="productPrice">Price</p>
-            <button class="addCart">Add Cart</button>
+      <h2 class="mainTitle">All Products</h2>
+      <div class="productsContainer"></div>
         </div>
+      </div>
     </main>
-</div>
+  </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script src="./src/js/index.js"></script>
 </body>
 </html>

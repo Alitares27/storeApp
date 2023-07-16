@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 
 :root{
-    --col-main: #4b33a8;
+    --col-main: rgb(8, 66, 66);
     --col-white:#ececec;
     --col-gray: #e2e2e2;
     --clo-red: #961818;
@@ -17,6 +17,9 @@ ul{
 }
 a{
     text-decoration: none;
+}
+#logo{
+    color: var(--col-white);
 }
 .wraper{
     display: grid;
@@ -47,13 +50,14 @@ aside{
     background-color: transparent;
     border: 0;
     color: var(--col-white);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     cursor: pointer;
     display: flex;
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
     align-items: center;
+    width: 100%;
 }
 .btnMenu.active{
     background-color: var(--col-white);
@@ -81,7 +85,7 @@ main{
     margin-bottom: 2rem;
 }
 
-.productContainer{
+.productsContainer{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1rem;
