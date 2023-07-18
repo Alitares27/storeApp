@@ -14,7 +14,7 @@ let addCart = document.querySelectorAll('.addCart');
 const number = document.querySelector('.number')
 
 btnsCategory.forEach(btn => btn.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
+    aside.classList.remove("visible");
 }))
 
 
@@ -70,7 +70,7 @@ function updateAddCartBtn() {
 
 let productsInCart;
 
-const productsInCartLS = JSON.parse(localStorage.getItem('products-In-Cart'));
+const productsInCartLS = JSON.parse(localStorage.getItem('products-in-cart'));
 
 if (productsInCartLS) {
     productsInCart = JSON.parse(productsInCartLS);
@@ -89,7 +89,7 @@ function addToCart(e) {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          background: "linear-gradient(to right, darkblue, darkcyan)",
           borderRadius: "2rem",
           textTransform: "uppercase",
           fontSize: ".75rem"
@@ -103,7 +103,7 @@ function addToCart(e) {
 
     const idBtn = e.currentTarget.id;
     const productAdded = products.find(product => product.id === idBtn);
-  
+  /*
     if(productsInCart.some(product => product.id === idBtn))  {
         const index = productsInCart.findIndex(product => product.id === idBtn);
         productsInCart[index].quantity++;
@@ -111,9 +111,9 @@ function addToCart(e) {
         productAdded.quantity = 1;
         productsInCart.push(productAdded);
     }
-    updateQtt();
+    updateQtt();*/
 
-    localStorage.setItem('products-In-Cart',JSON.stringify(productsInCart));
+    localStorage.setItem('products-in-cart',JSON.stringify(productsInCart));
 }
 
 function updateQtt() {
