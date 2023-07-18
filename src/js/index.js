@@ -103,8 +103,6 @@ function addToCart(e) {
 
     const idBtn = e.currentTarget.id;
     const productAdded = products.find(product => product.id === idBtn);
-    console.log(idBtn)
-    console.log(productAdded)
   
     if(productsInCart.some(product => product.id === idBtn))  {
         const index = productsInCart.findIndex(product => product.id === idBtn);
@@ -113,7 +111,6 @@ function addToCart(e) {
         productAdded.quantity = 1;
         productsInCart.push(productAdded);
     }
-
     updateQtt();
 
     localStorage.setItem('products-In-Cart',JSON.stringify(productsInCart));
