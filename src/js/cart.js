@@ -12,7 +12,7 @@ const cartActCheck = document.querySelector(".cartActCheck");
 
 
 function loadCart() {
-  if (productsInCart && productsInCart.length > 0) {
+  if (productsInCart.length > 0) {
     emptyCart.classList.add('disable');
     productsCart.classList.remove('disable');
     cartActions.classList.remove('disable');
