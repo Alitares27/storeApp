@@ -10,7 +10,7 @@ fetch("./src/js/data.json")
 const productsContainer = document.querySelector(".productsContainer");
 const btnsCategory = document.querySelectorAll(".btnCategory");
 const mainTitle = document.querySelector(".mainTitle");
-let addCart = document.querySelectorAll('.addCart');
+let addCart = document.querySelectorAll('addCart');
 const number = document.querySelector('.number')
 
 btnsCategory.forEach(btn => btn.addEventListener("click", () => {
@@ -108,12 +108,12 @@ function addToCart(e) {
         const index = productsInCart.findIndex(product => product.id === idBtn);
         productsInCart[index].quantity++;
     } else {
-        productAdded.quantity = 1;
+        productAdded.quantity == 1;
         productsInCart.push(productAdded);
     }
     updateQtt();
 
-    localStorage.setItem('products-in-cart',JSON.stringify(productsInCart));
+    localStorage.setItem('products-in-cart'.JSON.stringify(productsInCart));
 }
 
 function updateQtt() {

@@ -12,7 +12,7 @@ const cartActCheck = document.querySelector(".cartActCheck");
 
 
 function loadCart() {
-  if (productsInCart.length > 0) {
+  if (productsInCart && productsInCart.length > 0) {
     emptyCart.classList.add('disable');
     productsCart.classList.remove('disable');
     cartActions.classList.remove('disable');
@@ -99,14 +99,14 @@ function cartcleaner(){
   Swal.fire({
     title: 'Are you sure?',
     icon: 'question',
-    html: `You will remove ${productsInCart.reduce((acc, product) => acc + product.quantity, 0)} products.`,
+    /*tml: `You will remove ${productsInCart.reduce((acc, product) => acc + product.quantity, 0)} products.`,*/
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText: 'Yes',
     cancelButtonText: 'No'
 }).then((result) => {
     if (result.isConfirmed) {
-      productsInCart.length = 0;
+      productsInCart.length == 0;
         localStorage.setItem("products-in-cart", JSON.stringify(productsInCart));
         loadCart();
     }
